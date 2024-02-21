@@ -1,0 +1,36 @@
+﻿
+
+.gridWszystkieElementy{
+    padding: 20;
+}
+
+grid frame {
+    margin-top: 40;
+    margin-bottom: 40;
+}
+
+grid label{
+    font-size: 30;
+    vertical-align: center;
+}
+
+
+frame > entry{
+    color: white
+}
+
+.zmianaDanychInfo {
+    text-align: center;
+    font-size: 60;
+    margin-bottom: 20;
+}
+
+.buttonUsunUcznia {
+    background: red;
+    color: white
+}
+
+.buttonZapiszUcznia {
+    background: green;
+    color: white
+}

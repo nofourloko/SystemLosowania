@@ -1,0 +1,70 @@
+﻿^scrollview {
+    margin: 22;
+}
+
+
+
+#PasekTytulowy {
+    background-color: #1E1E1E;
+    padding: 10;
+
+}
+#PasekTytulowy > label {
+    font-size: 30;
+    vertical-align: start;
+
+}
+
+#WybranaKlasaGrid{
+    margin: 10;
+}
+
+
+.szczesliwyNumerekLabel {
+    text-align: end;
+    vertical-align: end;
+    font-family: SourceCodeProVariableFontwght;
+}
+
+.WyborKlasyLabel {
+    margin-top: 15;
+    font-size: 25;
+    text-align: center;
+}
+
+listview label {
+    vertical-align: center;
+    text-align: center;
+}
+
+#powitanie {
+    font-size: 50;
+    vertical-align: center;
+    text-align: center;
+}
+
+#buttonObecnoscLosowanie{
+    width: 500;
+    height: 120;
+    font-size: 32;
+    margin-top: 20;
+}
+
+#wylosowanyUczneLabel {
+    font-size: 32;
+    vertical-align: center;
+    text-align: center;
+}
+
+
+#nazwaKlasy{
+    font-size: 26;
+    margin: 10;
+}
+
+
+.ButonRadioObecnosc{
+    width: 10;
+    height: 10;
+    border-radius: 10;
+}

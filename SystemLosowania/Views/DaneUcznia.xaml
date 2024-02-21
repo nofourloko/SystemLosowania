@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SystemLosowania.Views.DaneUcznia"
+             Title="DaneUcznia">
+    <ContentPage.Resources>
+        <StyleSheet Source="../Resources/Styles/UczenInfoCSS.css" />
+    </ContentPage.Resources>
+
+   <Grid RowDefinitions="150,*,100"
+         StyleClass="gridWszystkieElementy">
+       <Label Grid.Row="0"
+              StyleClass="zmianaDanychInfo"
+              Text="Zmien Dane Ucznia"/>
+       <Grid Grid.Row="1"
+             ColumnDefinitions="*,*,*,*,*"
+             RowDefinitions="*,*,*,*">
+
+            <Label Grid.Row="0"
+                   Grid.Column="1"
+                   Text="Imie:"/>
+
+            <Label Grid.Row="0"
+                   Grid.Column="2"
+                   Text="{Binding uczen.Imie}"/>
+
+            <Frame Grid.Row="0"
+                   Grid.Column="3"
+                  
+                  >
+                <Editor Placeholder="Zmień imie :"
+                        x:Name="ZmianaImieniaEditor"/>
+            </Frame>
+
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   Text="Nazwisko:"/>
+
+            <Label Grid.Row="1"
+                   Grid.Column="2"
+                   Text="{Binding uczen.Nazwisko}"/>
+
+           <Frame Grid.Row="1"
+                   Grid.Column="3"
+                  >
+               <Editor
+                   x:Name="ZmianaNazwiskaEditor"
+                    Placeholder="Zmień Nazwisko : "/>
+
+           </Frame>
+
+           <Label Grid.Row="2"
+                   Grid.Column="1"
+                   Text="Klasa:"/>
+
+            <Label Grid.Row="2"
+                   Grid.Column="2"
+                   Text="{Binding uczen.Klasa}"/>
+           
+            <Frame Grid.Row="2"
+                   Grid.Column="3"
+                  >
+               <Editor
+                    x:Name="ZmianaKlaseEditor"
+                    Placeholder="Zmień klase :"
+                    />
+
+            </Frame>
+
+             
+
+       </Grid>
+       <Grid Grid.Row="2"
+             ColumnSpacing="30"
+             ColumnDefinitions="*,*,*,*">
+             <Button  Grid.Column="1"
+                      StyleClass="buttonZapiszUcznia"
+                      Clicked="Button_Zapisz"
+                      Text="Zapisz"/>
+
+            <Button  Grid.Column="2"
+                     StyleClass="buttonUsunUcznia"
+                     Clicked="Button_Usun"
+                     Text="Usun ucznia"/>
+
+       </Grid>
+
+   </Grid>
+</ContentPage>

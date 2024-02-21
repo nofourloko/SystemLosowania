@@ -1,0 +1,14 @@
+﻿{ "Imie" : "a", "nazwisko" : "ss", "klasa" : "4f", "Numer" : "1", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "b", "nazwisko" : "ss", "klasa" : "5f", "Numer" : "2", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "c", "nazwisko" : "ss", "klasa" : "2f", "Numer" : "3", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "d", "nazwisko" : "ss", "klasa" : "4f", "Numer" : "4", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "e", "nazwisko" : "ss", "klasa" : "4f", "Numer" : "5", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "f", "nazwisko" : "ss", "klasa" : "4f", "Numer" : "6", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "g", "nazwisko" : "ss", "klasa" : "4f", "Numer" : "7", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "h", "nazwisko" : "ss", "klasa" : "4f", "Numer" : "8", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "i", "nazwisko" : "ss", "klasa" : "4f", "Numer" : "9", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "j", "nazwisko" : "ss", "klasa" : "4f", "Numer" : "10", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "k", "nazwisko" : "ss", "klasa" : "4f", "Numer" : "11", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "l", "nazwisko" : "ss", "klasa" : "5f", "Numer" : "12", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "Jaj", "nazwisko" : "ss", "klasa" : "1f","Numer" : "13", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}
+{ "Imie" : "Jakub", "nazwisko" : "ss", "klasa" : "2f", "Numer" : "14", "CzyZostalaOdpytana" : "false", "LiczbaOsobWylosowanychPoOdpytaniu" : "0"}

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="System losowania do odpowiedzi"
+             xmlns:controls = "clr-namespace:SystemLosowania.Controls"
+             x:Class="SystemLosowania.Views.ListaUczniowView">
+    <ContentPage.Resources>
+        <StyleSheet Source="../Resources/Styles/ListaUczniowCSS.css" />
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="100,*">
+
+        <Border Grid.Row="0">
+
+            <Grid ColumnDefinitions="*,*" x:Name="PasekTytulowy">
+
+                <Label  Grid.Column="0"
+                        Text="System losowania osoby do odpowiedzi"/>
+
+                <Grid Grid.Column="1"
+                      ColumnDefinitions="*,20">
+
+                    <Label  Grid.Column="0"
+                            StyleClass="szczesliwyNumerekLabel"
+                            Text="Dzisiejszy szczesliwy numerek: "/>
+
+                    <Label  Grid.Column="1"
+                            StyleClass="szczesliwyNumerekLabel"
+                            Text="{Binding operacjeNaLiscie.szczesliwyNumerek.Numerek}"/>
+                </Grid>
+
+            </Grid>
+
+        </Border>
+        <Border Grid.Row="1">
+            <Grid ColumnDefinitions="200,*">
+
+                <Border Grid.Column="0">
+                    <Grid RowDefinitions="100,*,100">
+                        <Label Text="Wybierz klase:"
+                               Grid.Row="0"
+                               StyleClass="WyborKlasyLabel"/>
+                        <ScrollView Grid.Row="1">
+                            <ListView 
+                                  ItemsSource="{Binding operacjeNaLiscie.listaKlas}"
+                                  ItemSelected="ListView_WybranaKlasa"
+                                  SeparatorVisibility="None">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <controls:ListaKlasControl NazwaKlasy="{Binding nazwaKlasy}"
+                                                                       ControlTemplate="{StaticResource ListaKlasControlTemplate}"/>
+
+                                        </ViewCell>
+
+                                    </DataTemplate>
+
+                                </ListView.ItemTemplate>
+
+                            </ListView>
+
+                        </ScrollView>
+                        <Button Text="Dodaj Ucznia"
+                                Grid.Row="2"
+                                VerticalOptions="EndAndExpand"
+                                Clicked="Button_Clicked_DodajUcznia"/>
+                    
+                    </Grid>
+                
+                </Border>
+                <Grid   Grid.Column="1"
+                        x:Name="WybranaKlasaGrid"
+                        IsVisible="false"
+                        RowDefinitions="40,*,150,100">
+                    <Label Text=""
+                           x:Name="nazwaKlasy"
+                           Grid.Row="0"/>
+                    <ScrollView Grid.Row="1"
+                                >
+                            <ListView Grid.Column="0"
+                                  ItemsSource="{Binding operacjeNaLiscie.uczniowieKlasy}"
+                                  RowHeight="100"
+                                  SelectionMode="None"  
+                                  SeparatorVisibility="None">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Border Margin="10">
+                                                <Grid ColumnDefinitions="200,*,100">
+                                                    <ImageButton    Grid.Column="0"
+                                                                    Aspect="Center"
+                                                                    Clicked="ImageButton_ZobaczInformacje"
+                                                                    Source="transparency3.png"/>
+                                                     <controls:UczenKontrol Grid.Column="1"
+                                                                                Imie="{Binding Imie}"
+                                                                                Nazwisko="{Binding Nazwisko}"
+                                                                                Numerek="{Binding Numerek}"
+                                                                                ControlTemplate="{StaticResource UczenControlTemplate}"/>
+
+                                                    <Button Grid.Column="2"
+                                                                 VerticalOptions="Center"
+                                                                 IsVisible="{Binding Obecny}"
+                                                                 StyleClass="ButonRadioObecnosc"
+                                                                 Clicked="RadioButton_Obecnosc"
+                                                                 />
+
+                                                </Grid>
+
+                                            </Border>
+
+                                        </ViewCell>
+
+                                    </DataTemplate>
+
+                                </ListView.ItemTemplate>
+
+                            </ListView>
+
+                        </ScrollView>
+                    <Button Grid.Row="2"
+                            x:Name="buttonObecnoscLosowanie"
+                            Clicked="Button_Clicked_ZapiszObecność"
+                            Text="Zapisz obecność"/>
+
+                    <Label Grid.Row="3"
+                           x:Name="wylosowanyUczneLabel"
+                           IsVisible="false"
+                           Text="Wylosowany uczeń: Jakub Miśta"/>
+
+                    
+
+                </Grid>
+                <Label x:Name="powitanie"
+                       Grid.Column="1"
+                       Text="Proszę wybrać klase"/>
+
+        </Grid>
+        
+
+        </Border>
+        
+    </Grid>
+
+</ContentPage>

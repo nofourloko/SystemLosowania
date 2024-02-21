@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SystemLosowania.Views.DodanieUcznia"
+             Title="DodanieUcznia">
+    <ContentPage.Resources>
+        <StyleSheet Source="../Resources/Styles/UczenInfoCSS.css" />
+    </ContentPage.Resources>
+
+    <Grid ColumnSpacing="10"
+          RowSpacing="20"
+            x:Name="dodanieUczniaGrid"
+                          Margin="5"
+                          ColumnDefinitions="*,*,*"
+                          RowDefinitions="*,150,50,50,50,50,100,*">
+                            <Label Text="Dodaj Nowego Ucznia"
+                                   StyleClass="zmianaDanychInfo"
+                                   Grid.Row = "1"
+                                   Grid.Column="1"/>
+                            <Border Grid.Row = "2"
+                                    Grid.Column="1">
+                                <Editor x:Name="ImieEditor"
+                                        Placeholder="Wpisz imie:"
+                                        PlaceholderColor="White"
+                                    />
+
+                            </Border>
+                            <Border Grid.Row ="3"
+                                    Grid.Column="1">
+                                <Editor x:Name="NaziwskoEditor"
+                                        Placeholder="Wpisz naziwsko:"
+                                        PlaceholderColor="White"
+                                    />
+
+                            </Border>
+
+                            <Border Grid.Row ="4"
+                                    Grid.Column="1">
+                                <Editor x:Name="KlasaEditor"
+                                        Placeholder="Wpisz klase:"
+                                        PlaceholderColor="White"
+                                    />
+
+                            </Border>
+
+                            <Border Grid.Row ="5"
+                                    Grid.Column="1">
+                                <Editor x:Name="NumerEditor"
+                                        Placeholder="Wpisz numer (od 1 do 30):"
+                                        PlaceholderColor="White"
+                                    />
+
+                            </Border>
+                            
+                            <Button Text="Dodaj"
+                                    x:Name="ButtonDodajUcznia"
+                                    Clicked="Button_DodajUcznia"
+                                    Grid.Column="1"
+                                    Grid.Row="6"/>
+
+                    </Grid>
+</ContentPage>
